@@ -1,10 +1,5 @@
-This Markdown report is structured specifically for your project submission. It covers the **Money Detective** project in detail, following the exact criteria requested in your deliverables sheet. 
 
-You can copy and paste this directly into your repository's `README.md`, or export it to a Google Doc / PDF.
-
----
-
-# Project Report: Personal Finance Auditing
+# Task 1 Report: Personal Finance Auditing
 
 ## Task 1: Money Detective (Financial Leak & Subscription Analysis)
 
