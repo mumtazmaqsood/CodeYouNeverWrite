@@ -79,3 +79,148 @@ This project demonstrated that minor, recurring subscriptions (like multiple `19
 
 * *<img width="778" height="868" alt="image" src="https://github.com/user-attachments/assets/50d119b5-5970-4f69-bb3a-e50e7b666575" />
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+## Task 2
+
+**Task 2 – What's My Grade, Really?**
+
+---
+
+## Problem the Project Solves
+
+Many online grade calculators and school learning management systems cannot accurately calculate a student's course grade because they do not support instructor-specific grading policies. These policies may include weighted grading categories, dropping the lowest assignment or quiz, replacing a low midterm score with a higher final exam score, or awarding bonus points.
+
+This project solves that problem by creating a Python grade calculator that follows the instructor's grading rules exactly. It also predicts the score needed on the final exam to achieve a desired overall course grade.
+
+---
+
+## AI Tool(s) Used
+
+- **ChatGPT (OpenAI)**
+
+ChatGPT was used to:
+- Generate realistic sample grading data.
+- Design the grading policy.
+- Write the Python grade calculator.
+- Calculate the current course grade.
+- Determine the required final exam score for a target grade.
+- Produce documentation for the project.
+
+---
+
+## Initial Prompt
+
+> Write a Python script that calculates my current course grade using my assignments, quizzes, midterms, and grading policy. The grading policy includes weighted categories, dropping the lowest quiz, conditionally dropping the lowest assignment, replacing the lowest midterm with the final exam if it is higher, and adding bonus points.
+
+---
+
+## Improved Prompt
+
+> Write a reusable Python program that:
+>
+> - Calculates the current course grade using the provided sample scores.
+> - Drops the lowest quiz automatically.
+> - Drops the lowest assignment if the assignment average remains at least 85%.
+> - Replaces the lowest midterm score with the final exam score if the final exam is higher.
+> - Applies weighted grading categories.
+> - Calculates the exact final exam score needed to achieve a target overall course grade.
+> - Makes it easy to update scores throughout the semester.
+
+The improved prompt produced a more complete and reusable solution.
+
+---
+
+## How I Verified the Result
+
+The program's calculations were verified manually by checking the quiz category.
+
+Quiz scores:
+
+- 18
+- 20
+- 15
+- 19
+- 17
+
+The grading policy states that the lowest quiz score should be dropped.
+
+Dropped score:
+
+15
+
+Remaining scores:
+
+18, 20, 19, 17
+
+Average:
+
+(18 + 20 + 19 + 17) ÷ 4 = 18.5
+
+Percentage:
+
+18.5 ÷ 20 × 100 = **92.5%**
+
+The Python program produced the same quiz average (92.5%), confirming that the implementation was correct.
+
+---
+
+## What Worked
+
+- The AI generated a complete Python program from a natural language description.
+- The weighted grading calculations were accurate.
+- The script correctly implemented score-dropping rules.
+- The program automatically calculated the current course grade.
+- It successfully determined the required final exam score for any target grade.
+- The script was easy to modify with new grades.
+
+---
+
+## What Did Not Work Initially
+
+Initially, the generated solution only calculated the current grade and did not determine the required final exam score.
+
+The first version also did not clearly separate the grading rules into reusable sections, making future updates more difficult.
+
+These issues were resolved by improving the prompt and requesting a reusable script with additional functionality.
+
+---
+
+## Problems Faced
+
+Since actual course grades and grading policies were unavailable, realistic sample data had to be created for testing.
+
+Another challenge was ensuring that all grading rules interacted correctly, particularly:
+
+- Dropping the lowest assignment only when the average remained above the required threshold.
+- Ignoring the final exam weight until the exam had been completed.
+- Correctly replacing the lowest midterm score only when the final exam score was higher.
+
+These rules required careful implementation and testing.
+
+---
+
+## Final Result
+
+The final project produced a reusable Python grade calculator that:
+
+- Calculates the current course grade.
+- Applies instructor-specific grading rules.
+- Drops the lowest quiz score.
+- Conditionally drops the lowest assignment.
+- Replaces the lowest midterm with the final exam when appropriate.
+- Supports bonus points.
+- Calculates the exact final exam score required for any target course grade.
+- Can be updated throughout the semester by changing only the score lists.
+
+Using the sample data, the calculator reported a current course grade of approximately **90.11%** and determined that approximately **89.8%** on the final exam would be needed to finish the course with a **90% overall grade**.
+
+---
+
+## What I Learned
+This project demonstrated how AI can automate complex calculations while following customized grading rules. I learned how to convert grading policies into program logic, verify AI-generated results through manual calculations, and improve AI prompts to obtain more accurate and reusable solutions.
+
+The project also highlighted the importance of validating AI-generated code instead of accepting the output without checking its correctness.
+
+This project demonstrated how AI can automate complex calculations while following customized grading rules. I learned how to convert grading policies into program logic, verify AI-generated results through manual calculations, and improve AI prompts to obtain more accurate and reusable solutions.
+
+The project also highlighted the importance of validating AI-generated code instead of accepting the output without checking its correctness.
