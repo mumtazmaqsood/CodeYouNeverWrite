@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>University Class Trip - Reconciliation Report</title>
+    <style>
+        :root {
+            --slate-900: #0f172a;
+            --slate-800: #1e293b;
+            --slate-700: #334155;
+            --slate-100: #f1f5f9;
+            --slate-50: #f8fafc;
+            --emerald-600: #059669;
+            --emerald-50: #ecfdf5;
+            --amber-600: #d97706;
+            --amber-50: #fffbeb;
+            --rose-600: #e11d48;
+            --rose-50: #fff1f2;
+            --border: #cbd5e1;
+            --text-dark: #1e293b;
+            --text-muted: #64748b;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background-color: var(--slate-50);
+            color: var(--text-dark);
+            line-height: 1.6;
+            margin: 0;
+            padding: 30px 15px;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        header {
+            background-color: var(--slate-900);
+            color: white;
+            padding: 30px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+        }
+
+        header h1 {
+            margin: 0 0 10px 0;
+            font-size: 1.8rem;
+            font-weight: 700;
+        }
+
+        header p {
+            margin: 0;
+            font-size: 1rem;
+            opacity: 0.8;
+        }
+
+        .grid-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .card {
+            background-color: white;
+            border-radius: 6px;
+            padding: 20px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+            border: 1px solid var(--border);
+        }
+
+        .card h3 {
+            margin: 0 0 10px 0;
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .card .value {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--slate-900);
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 4px 10px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            border-radius: 4px;
+            text-transform: uppercase;
+        }
+
+        .badge-success { background-color: var(--emerald-50); color: var(--emerald-600); }
+        .badge-warning { background-color: var(--amber-50); color: var(--amber-600); }
+        .badge-danger { background-color: var(--rose-50); color: var(--rose-600); }
+
+        .section-title {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--slate-800);
+            margin: 40px 0 15px 0;
+            border-bottom: 2px solid var(--slate-100);
+            padding-bottom: 8px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 25px;
+            background-color: white;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+            border: 1px solid var(--border);
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        th, td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid var(--border);
+        }
+
+        th {
+            background-color: var(--slate-100);
+            color: var(--slate-800);
+            font-weight: 600;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.02em;
+        }
+
+        tr:last-child td {
+            border-bottom: none;
+        }
+
+        .alert-box {
+            background-color: var(--rose-50);
+            border-left: 4px solid var(--rose-600);
+            color: var(--rose-600);
+            padding: 15px 20px;
+            border-radius: 4px;
+            margin-bottom: 35px;
+            font-size: 0.95rem;
+        }
+
+        .alert-box strong {
+            display: block;
+            margin-bottom: 5px;
+            font-size: 1rem;
+        }
+
+        .list-unstyled {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .list-unstyled li {
+            padding: 10px 15px;
+            background-color: white;
+            border: 1px solid var(--border);
+            border-radius: 4px;
+            margin-bottom: 10px;
+            font-size: 0.9rem;
+        }
+
+        .grid-2 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(480px, 1fr));
+            gap: 25px;
+        }
+
+        .numeric-col {
+            text-align: right;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>University Class Trip Reconciliation</h1>
+        <p>Event Ledger & Verification Audit — June 30, 2026</p>
+    </header>
+
+    <!-- Executive Summary Status -->
+    <div class="alert-box">
+        <strong>Discrepancy Detected (Reconciliation FAIL)</strong>
+        The total funds collected ($375.00) exceed the expected total of $300.00 by exactly $75.00. While all 12 students have successfully paid their digital dues, an additional $75.00 in cash was collected and deposited. This indicates a surplus of 3 unexplained payments.
+    </div>
+
+    <!-- 1. Executive Summary Cards -->
+    <div class="section-title">1. Executive Summary Metrics</div>
+    <div class="grid-cards">
+        <div class="card">
+            <h3>Expected Total</h3>
+            <div class="value">$300.00</div>
+        </div>
+        <div class="card">
+            <h3>Physical Cash Counted</h3>
+            <div class="value">$75.00</div>
+        </div>
+        <div class="card">
+            <h3>Valid Digital Payments</h3>
+            <div class="value">$300.00</div>
+        </div>
+        <div class="card">
+            <h3>Reconciled Collection</h3>
+            <div class="value" style="color: var(--amber-600);">$375.00</div>
+        </div>
+    </div>
+
+    <!-- 2. Student Reconciliation Table -->
+    <div class="section-title">2. Student Reconciliation Table</div>
+    <table>
+        <thead>
+            <tr>
+                <th>Student ID</th>
+                <th>Student Name</th>
+                <th>Amount Due</th>
+                <th>Matched Tx ID</th>
+                <th>Sender Name (App)</th>
+                <th>Payment Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>S01</td>
+                <td>Alice Johnson</td>
+                <td>$25.00</td>
+                <td>TXN001</td>
+                <td>Alice J.</td>
+                <td><span class="badge badge-success">Paid (Digital)</span></td>
+            </tr>
+            <tr>
+                <td>S02</td>
+                <td>Brian Smith</td>
+                <td>$25.00</td>
+                <td>TXN002</td>
+                <td>Brian</td>
+                <td><span class="badge badge-success">Paid (Digital)</span></td>
+            </tr>
+            <tr>
+                <td>S03</td>
+                <td>Chloe Davis</td>
+                <td>$25.00</td>
+                <td>TXN003</td>
+                <td>Chloe D</td>
+                <td><span class="badge badge-success">Paid (Digital)</span></td>
+            </tr>
+            <tr>
+                <td>S04</td>
+                <td>Daniel Lee</td>
+                <td>$25.00</td>
+                <td>TXN004</td>
+                <td>Dan Lee</td>
+                <td><span class="badge badge-success">Paid (Digital)</span></td>
+            </tr>
+            <tr>
+                <td>S05</td>
+                <td>Emma Wilson</td>
+                <td>$25.00</td>
+                <td>TXN005</td>
+                <td>Emma W</td>
+                <td><span class="badge badge-success">Paid (Digital)</span></td>
+            </tr>
+            <tr>
+                <td>S06</td>
+                <td>Faisal Khan</td>
+                <td>$25.00</td>
+                <td>TXN006</td>
+                <td>F. Khan</td>
+                <td><span class="badge badge-success">Paid (Digital)</span></td>
+            </tr>
+            <tr>
+                <td>S07</td>
+                <td>Grace Miller</td>
+                <td>$25.00</td>
+                <td>TXN007</td>
+                <td>Grace</td>
+                <td><span class="badge badge-success">Paid (Digital)</span></td>
+            </tr>
+            <tr>
+                <td>S08</td>
+                <td>Hannah Brown</td>
+                <td>$25.00</td>
+                <td>TXN008</td>
+                <td>Hannah B</td>
+                <td><span class="badge badge-success">Paid (Digital)</span></td>
+            </tr>
+            <tr>
+                <td>S09</td>
+                <td>Isaac Taylor</td>
+                <td>$25.00</td>
+                <td>TXN009</td>
+                <td>Isaac T</td>
+                <td><span class="badge badge-success">Paid (Digital)</span></td>
+            </tr>
+            <tr>
+                <td>S10</td>
+                <td>Julia Thomas</td>
+                <td>$25.00</td>
+                <td>TXN010</td>
+                <td>Julia</td>
+                <td><span class="badge badge-success">Paid (Digital)</span></td>
+            </tr>
+            <tr>
+                <td>S11</td>
+                <td>Kevin White</td>
+                <td>$25.00</td>
+                <td>TXN011</td>
+                <td>K. White</td>
+                <td><span class="badge badge-success">Paid (Digital)</span></td>
+            </tr>
+            <tr>
+                <td>S12</td>
+                <td>Lily Anderson</td>
+                <td>$25.00</td>
+                <td>TXN012</td>
+                <td>Lily A</td>
+                <td><span class="badge badge-success">Paid (Digital)</span></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- 3. Transaction Analysis -->
+    <div class="section-title">3. Raw Transaction Classification Analysis</div>
+    <table>
+        <thead>
+            <tr>
+                <th>Tx ID</th>
+                <th>Original Sender</th>
+                <th>Resolved Student Name</th>
+                <th>Amount</th>
+                <th>Classification Mapping</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>TXN001</td>
+                <td>Alice J.</td>
+                <td>Alice Johnson</td>
+                <td>$25.00</td>
+                <td><span class="badge badge-success">Valid Payment</span></td>
+            </tr>
+            <tr>
+                <td>TXN002</td>
+                <td>Brian</td>
+                <td>Brian Smith</td>
+                <td>$25.00</td>
+                <td><span class="badge badge-success">Valid Payment</span></td>
+            </tr>
+            <tr>
+                <td>TXN003</td>
+                <td>Chloe D</td>
+                <td>Chloe Davis</td>
+                <td>$25.00</td>
+                <td><span class="badge badge-success">Valid Payment</span></td>
+            </tr>
+            <tr>
+                <td>TXN004</td>
+                <td>Dan Lee</td>
+                <td>Daniel Lee</td>
+                <td>$25.00</td>
+                <td><span class="badge badge-success">Valid Payment</span></td>
+            </tr>
+            <tr>
+                <td>TXN005</td>
+                <td>Emma W</td>
+                <td>Emma Wilson</td>
+                <td>$25.00</td>
+                <td><span class="badge badge-success">Valid Payment</span></td>
+            </tr>
+            <tr>
+                <td>TXN006</td>
+                <td>F. Khan</td>
+                <td>Faisal Khan</td>
+                <td>$25.00</td>
+                <td><span class="badge badge-success">Valid Payment</span></td>
+            </tr>
+            <tr>
+                <td>TXN007</td>
+                <td>Grace</td>
+                <td>Grace Miller</td>
+                <td>$25.00</td>
+                <td><span class="badge badge-success">Valid Payment</span></td>
+            </tr>
+            <tr>
+                <td>TXN008</td>
+                <td>Hannah B</td>
+                <td>Hannah Brown</td>
+                <td>$25.00</td>
+                <td><span class="badge badge-success">Valid Payment</span></td>
+            </tr>
+            <tr>
+                <td>TXN009</td>
+                <td>Isaac T</td>
+                <td>Isaac Taylor</td>
+                <td>$25.00</td>
+                <td><span class="badge badge-success">Valid Payment</span></td>
+            </tr>
+            <tr>
+                <td>TXN010</td>
+                <td>Julia</td>
+                <td>Julia Thomas</td>
+                <td>$25.00</td>
+                <td><span class="badge badge-success">Valid Payment</span></td>
+            </tr>
+            <tr>
+                <td>TXN011</td>
+                <td>K. White</td>
+                <td>Kevin White</td>
+                <td>$25.00</td>
+                <td><span class="badge badge-success">Valid Payment</span></td>
+            </tr>
+            <tr>
+                <td>TXN012</td>
+                <td>Lily A</td>
+                <td>Lily Anderson</td>
+                <td>$25.00</td>
+                <td><span class="badge badge-success">Valid Payment</span></td>
+            </tr>
+            <tr>
+                <td>TXN013</td>
+                <td>Alice Johnson</td>
+                <td>Alice Johnson</td>
+                <td>$25.00</td>
+                <td><span class="badge badge-warning">Duplicate Payment</span></td>
+            </tr>
+            <tr>
+                <td>TXN014</td>
+                <td>Unknown</td>
+                <td>None (Unresolved)</td>
+                <td>$25.00</td>
+                <td><span class="badge badge-danger">Unknown Sender</span></td>
+            </tr>
+            <tr>
+                <td>TXN015</td>
+                <td>Emma Wilson</td>
+                <td>Emma Wilson</td>
+                <td>$10.00</td>
+                <td><span class="badge badge-danger">Non-Trip Transaction</span></td>
+            </tr>
+            <tr>
+                <td>TXN016</td>
+                <td>Cash Deposit</td>
+                <td>None (Reconciliation)</td>
+                <td>$75.00</td>
+                <td><span class="badge badge-warning">Cash Deposit Record</span></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="grid-2">
+        <!-- 4. Duplicate Payments & 5. Unmatched -->
+        <div>
+            <div class="section-title">4. Duplicate Payments</div>
+            <ul class="list-unstyled">
+                <li>
+                    <strong>TXN013 - Alice Johnson ($25.00):</strong> 
+                    This is an identical payment to TXN001. Alice paid under her nickname "Alice J." first, and later sent another payment under her full name "Alice Johnson". The latter transaction has been ignored to prevent ledger bloat.
+                </li>
+            </ul>
+
+            <div class="section-title">5. Unmatched Transactions</div>
+            <ul class="list-unstyled">
+                <li>
+                    <strong>TXN014 - Unknown ($25.00):</strong> 
+                    No student profile matches this sender. The payment has been ignored for individual student reconciliation, but represents unrecognized funds in the account.
+                </li>
+                <li>
+                    <strong>TXN015 - Emma Wilson ($10.00):</strong> 
+                    This transaction represents a separate item (labeled "snacks") and falls outside the required $25.00 trip fee protocol. It has been ignored.
+                </li>
+                <li>
+                    <strong>TXN016 - Cash Deposit ($75.00):</strong> 
+                    This is the digital logging of physical cash collected in person. It is ignored here to prevent double-counting.
+                </li>
+            </ul>
+        </div>
+
+        <!-- 6. Missing Payments & 7. Rule Resolutions -->
+        <div>
+            <div class="section-title">6. Missing Payments</div>
+            <ul class="list-unstyled">
+                <li style="border-left: 4px solid var(--emerald-600); background-color: var(--emerald-50); color: var(--emerald-600);">
+                    <strong>Zero Outstanding Dues:</strong> All 12 students listed on the official roster have successfully completed their required payments.
+                </li>
+            </ul>
+
+            <div class="section-title">7. Rule Resolution Log (Mappings)</div>
+            <ul class="list-unstyled" style="font-family: monospace; font-size: 0.85rem;">
+                <li>"Alice J." &rarr; Alice Johnson [Mapped via Ground Truth JSON]</li>
+                <li>"Brian" &rarr; Brian Smith [Mapped via Ground Truth JSON]</li>
+                <li>"Chloe D" &rarr; Chloe Davis [Mapped via Ground Truth JSON]</li>
+                <li>"Dan Lee" &rarr; Daniel Lee [Mapped via Ground Truth JSON]</li>
+                <li>"Emma W" &rarr; Emma Wilson [Mapped via Ground Truth JSON]</li>
+                <li>"F. Khan" &rarr; Faisal Khan [Mapped via Ground Truth JSON]</li>
+                <li>"Grace" &rarr; Grace Miller [Mapped via Ground Truth JSON]</li>
+                <li>"Hannah B" &rarr; Hannah Brown [Mapped via Ground Truth JSON]</li>
+                <li>"Isaac T" &rarr; Isaac Taylor [Mapped via Ground Truth JSON]</li>
+                <li>"Julia" &rarr; Julia Thomas [Mapped via Ground Truth JSON]</li>
+                <li>"K. White" &rarr; Kevin White [Mapped via Ground Truth JSON]</li>
+                <li>"Lily A" &rarr; Lily Anderson [Mapped via Ground Truth JSON]</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- 8. Financial Summary Table -->
+    <div class="section-title">8. Financial Summary Table</div>
+    <table style="max-width: 600px;">
+        <thead>
+            <tr>
+                <th>Financial Metric</th>
+                <th class="numeric-col">Value (USD)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Expected Total Trip Revenue (12 * $25)</td>
+                <td class="numeric-col">$300.00</td>
+            </tr>
+            <tr>
+                <td>Cash Collected (Hand-Counted)</td>
+                <td class="numeric-col">$75.00</td>
+            </tr>
+            <tr>
+                <td>Valid Digital Payments (12 * $25)</td>
+                <td class="numeric-col">$300.00</td>
+            </tr>
+            <tr style="color: var(--text-muted);">
+                <td>Duplicate Amount Ignored (TXN013)</td>
+                <td class="numeric-col">$25.00</td>
+            </tr>
+            <tr style="color: var(--text-muted);">
+                <td>Unknown Amount Ignored (TXN014)</td>
+                <td class="numeric-col">$25.00</td>
+            </tr>
+            <tr style="color: var(--text-muted);">
+                <td>Invalid Amount Ignored (TXN015)</td>
+                <td class="numeric-col">$10.00</td>
+            </tr>
+            <tr style="background-color: var(--slate-100); font-weight: bold;">
+                <td>Total Valid Funds in Hand (Digital + Physical Cash)</td>
+                <td class="numeric-col">$375.00</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- 9. Final Conclusion -->
+    <div class="section-title">9. Final Conclusion</div>
+    <p>
+        The mathematical ledger reconciliation has concluded. The process reveals that <strong>the books do not balance against original expectations</strong>, resulting in a <strong>FAIL</strong> status because of an overcollection of <strong>+$75.00</strong>.
+    </p>
+    <p>
+        The source of the issue is identified: We expected 9 students to pay digitally ($225.00) and 3 to pay in cash ($75.00). Instead, <strong>all 12 students paid digitally ($300.00)</strong>, and we also collected <strong>$75.00 in physical cash</strong>.
+    </p>
+    <p>
+        <strong>Suggested Action Plan:</strong>
+        Since all 12 students paid via the app, the $75.00 physical cash collection is mathematically redundant. The treasurer should cross-reference physical cash receipts to identify which three students paid twice (once in cash, once digitally) and process immediate $25.00 digital refunds to them to return the fund total to the expected $300.00.
+    </p>
+</div>
+
+</body>
+</html>

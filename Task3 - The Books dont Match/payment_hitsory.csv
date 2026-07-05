@@ -1,0 +1,17 @@
+transaction_id,date,sender_name,amount,memo
+TXN001,2026-03-02,Alice J.,25,trip
+TXN002,2026-03-02,Brian,25,class
+TXN003,2026-03-03,Chloe D,25,Trip Fee
+TXN004,2026-03-03,Dan Lee,25,👍
+TXN005,2026-03-03,Emma W,25,
+TXN006,2026-03-04,F. Khan,25,paid
+TXN007,2026-03-04,Grace,25,trip2026
+TXN008,2026-03-04,Hannah B,25,class trip
+TXN009,2026-03-05,Isaac T,25,fee
+TXN010,2026-03-05,Julia,25,😊
+TXN011,2026-03-06,K. White,25,t
+TXN012,2026-03-06,Lily A,25,paid
+TXN013,2026-03-06,Alice Johnson,25,extra?
+TXN014,2026-03-07,Unknown,25,trip
+TXN015,2026-03-07,Emma Wilson,10,snacks
+TXN016,2026-03-07,Cash Deposit,75,cash from collection

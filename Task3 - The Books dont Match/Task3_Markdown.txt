@@ -1,0 +1,132 @@
+# Task 3 — The Books Don't Match
+
+## Objective
+
+Reconcile a known, hand-counted total against a messy digital payment history. The goal is to identify discrepancies, resolve ambiguous payment records using predefined rules, and determine which payments or people require follow-up.
+
+---
+
+## Scenario
+
+You are the treasurer for a university class trip.
+
+Each student is required to contribute **$25** toward the trip expenses.
+
+After collecting payments, you manually counted the money received and verified the total.
+
+### Known Correct Total
+
+- **Expected Total Collected:** **$300**
+- **Trip Fee per Student:** **$25**
+- **Expected Number of Students:** **12**
+- **Cash Collected:** **$75**
+- **Expected Digital Payments:** **$225**
+
+The reconciliation should confirm that the combined cash and valid digital payments equal **$300**.
+
+---
+
+## Files Provided
+
+### `students.csv`
+
+Contains the official list of students expected to pay.
+
+Fields:
+
+- Student ID
+- Student Name
+- Amount Due
+
+---
+
+### `payment_history.csv`
+
+Contains the raw digital payment history exactly as exported from the payment platform.
+
+Characteristics:
+
+- Inconsistent sender names
+- Nicknames
+- Initials
+- Blank memos
+- Emoji memos
+- Duplicate payment
+- Unknown sender
+- Non-trip transaction
+- Cash deposit record
+
+No preprocessing has been performed.
+
+---
+
+### `ground_truth.json`
+
+Contains:
+
+- Expected totals
+- Payment amount
+- Name mappings
+- Validation rules
+- Reconciliation constraints
+
+---
+
+## Interpretation Rules
+
+Use the following rules when matching payments to students.
+
+### Payment Rules
+
+- A valid trip payment must be exactly **$25**.
+- Ignore transactions with amounts other than **$25**.
+- Ignore duplicate payments from the same student.
+- Ignore payments from unknown senders unless they can be confidently identified.
+
+### Name Mapping Rules
+
+| Payment Record | Actual Student |
+|---------------|----------------|
+| Alice J. | Alice Johnson |
+| Brian | Brian Smith |
+| Chloe D | Chloe Davis |
+| Dan Lee | Daniel Lee |
+| Emma W | Emma Wilson |
+| F. Khan | Faisal Khan |
+| Grace | Grace Miller |
+| Hannah B | Hannah Brown |
+| Isaac T | Isaac Taylor |
+| Julia | Julia Thomas |
+| K. White | Kevin White |
+| Lily A | Lily Anderson |
+
+---
+
+## Expected Outcome
+
+The reconciliation process should:
+
+1. Match each payment to the correct student.
+2. Detect duplicate payments.
+3. Identify payments that cannot be matched.
+4. Ignore unrelated transactions.
+5. Verify whether the final reconciled total equals the known correct total.
+6. Produce a report listing:
+   - Successfully matched students
+   - Duplicate payments
+   - Unknown payments
+   - Missing payments
+   - Final reconciled total
+   - Any discrepancies requiring follow-up
+
+---
+
+## Success Criteria
+
+A successful reconciliation should:
+
+- Confirm that valid payments plus cash equal **$300**.
+- Explain every unmatched transaction.
+- Identify any duplicate payments.
+- List any students who appear unpaid.
+- Clearly document how ambiguous names were resolved.

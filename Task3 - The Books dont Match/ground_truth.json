@@ -1,0 +1,28 @@
+{
+  "event": "University Class Trip",
+  "known_total": 300,
+  "cash_collected": 75,
+  "expected_digital_total": 225,
+  "trip_fee": 25,
+  "expected_students": 12,
+  "rules": {
+    "accepted_amount": 25,
+    "ignore_duplicates": true,
+    "ignore_unknown_sender": true,
+    "ignore_non_trip_amounts": true
+  },
+  "name_mapping": {
+    "Alice J.": "Alice Johnson",
+    "Brian": "Brian Smith",
+    "Chloe D": "Chloe Davis",
+    "Dan Lee": "Daniel Lee",
+    "Emma W": "Emma Wilson",
+    "F. Khan": "Faisal Khan",
+    "Grace": "Grace Miller",
+    "Hannah B": "Hannah Brown",
+    "Isaac T": "Isaac Taylor",
+    "Julia": "Julia Thomas",
+    "K. White": "Kevin White",
+    "Lily A": "Lily Anderson"
+  }
+}
