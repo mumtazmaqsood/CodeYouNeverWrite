@@ -1,0 +1,61 @@
+### Requirements Data
+
+For this project, the following sample data will be used to simulate a real course grading system.
+
+### Student Scores
+
+#### Assignments (100 points each)
+
+| Assignment | Score |
+|------------|------:|
+| Assignment 1 | 92 |
+| Assignment 2 | 85 |
+| Assignment 3 | 78 |
+| Assignment 4 | 96 |
+| Assignment 5 | 88 |
+| Assignment 6 | 91 |
+
+#### Quizzes (20 points each)
+
+| Quiz | Score |
+|------|------:|
+| Quiz 1 | 18 |
+| Quiz 2 | 20 |
+| Quiz 3 | 15 |
+| Quiz 4 | 19 |
+| Quiz 5 | 17 |
+
+#### Midterm Exams (100 points each)
+
+| Midterm | Score |
+|---------|------:|
+| Midterm 1 | 84 |
+| Midterm 2 | 90 |
+
+#### Final Exam
+
+| Exam | Score |
+|------|------:|
+| Final Exam | Not taken yet |
+
+---
+
+### Teacher's Grading Policy
+
+The course grade is calculated using the following category weights:
+
+| Category | Weight |
+|----------|--------:|
+| Assignments | 35% |
+| Quizzes | 20% |
+| Midterm Exams | 25% |
+| Final Exam | 20% |
+
+#### Grading Rules
+
+- The **lowest quiz score** is automatically dropped before calculating the quiz average.
+- The **lowest assignment score** is dropped if the assignment average is **85% or higher** after the drop.
+- If the **Final Exam score is higher than the lowest Midterm score**, it replaces that lowest Midterm score when calculating the midterm average.
+- Students can earn up to **3 bonus percentage points** toward their final course grade by completing extra-credit activities.
+
+---
