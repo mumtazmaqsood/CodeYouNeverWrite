@@ -73,3 +73,5 @@ Reconciliation failures do not always mean money is missing; they can also indic
 ---
 
 ### 7. Project Screenshots / Visual Demo Placeholders
+<img width="585" height="893" alt="image" src="https://github.com/user-attachments/assets/e109e306-b3c0-4777-b261-276ab171a07f" />
+<img width="614" height="882" alt="image" src="https://github.com/user-attachments/assets/70fa22dd-efed-44be-b3db-22b66781f773" />
