@@ -77,5 +77,5 @@ This project demonstrated that minor, recurring subscriptions (like multiple `19
 
 ### 7. Project Screenshots / Visual Demo Placeholders
 
-* *[Insert Screenshot of the interactive HTML Dashboard here]*
-* *[Insert Screenshot of Python script execution output showing the flagged duplicates and telecom overlap warnings here]*
+* *<img width="778" height="868" alt="image" src="https://github.com/user-attachments/assets/50d119b5-5970-4f69-bb3a-e50e7b666575" />
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
