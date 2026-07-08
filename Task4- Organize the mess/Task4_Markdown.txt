@@ -1,0 +1,105 @@
+# Task: Find What's Actually in Your Folders
+
+## Overview
+Over time, most people accumulate digital clutter—duplicate files, forgotten downloads, screenshots, and documents saved in multiple locations. This task helps you safely analyze and organize a messy folder while protecting your original files.
+
+> **Safety First:** This project involves real file operations. A mistake could delete, rename, or move the wrong files. Always follow the safety steps before allowing any code to modify your files.
+
+---
+
+## Requirements
+
+Before you begin, make sure you have:
+
+- A genuinely messy folder on your computer (e.g., **Downloads**, **Documents**, or an old project folder).
+- Real files you have forgotten about or are unsure whether to keep.
+
+---
+
+## Step-by-Step Instructions
+
+### 1. Create a Backup
+Before making any changes, create a complete copy of the target folder.
+
+- ✅ Work **only on the copied folder**.
+- ❌ Never allow code to modify the original files until you fully trust the script.
+
+---
+
+### 2. Define Your Cleanup Goal
+Write a short description of what a "clean" folder means to you.
+
+Examples:
+- Find duplicate files (same name or identical content)
+- Identify very large files
+- Group files by type
+- Locate old or unused documents
+- Organize screenshots into a separate folder
+
+---
+
+### 3. Request a Dry Run
+Before any file operations occur, instruct the AI:
+
+> **"Show me your full plan first—every file you would move, delete, or rename—and wait for my approval before touching anything."**
+
+The AI should produce a detailed preview without making any changes.
+
+---
+
+### 4. Review the Plan
+Carefully examine the proposed actions.
+
+Check:
+- Files marked as duplicates
+- Files to be moved
+- Files to be renamed
+- Files suggested for deletion
+
+If anything looks incorrect, revise the plan before proceeding.
+
+---
+
+### 5. Approve and Execute
+Only after reviewing and approving the plan should the script run.
+
+The script should:
+- Create new folders if needed
+- Copy or move files safely
+- Avoid overwriting original files
+- Leave the backup intact
+
+---
+
+### 6. Verify the Results
+After execution:
+
+- Spot-check the reorganized files.
+- Confirm everything is where you expect.
+- Ensure no important files were lost.
+
+Finally, save the cleanup script so it can be reused in the future.
+
+---
+
+## Expected Outcome
+
+By completing this task safely, you should gain a clear understanding of what is actually stored in your folders.
+
+Example outcomes:
+
+- Found **2 GB** of duplicate photos that can be safely removed.
+- Rediscovered several unfinished documents worth revisiting.
+- Organized downloads into meaningful categories.
+- Reduced digital clutter without risking the original files.
+
+---
+
+## Key Safety Rules
+
+- Always work on a **backup copy** first.
+- Never delete or rename files without reviewing the plan.
+- Require a **dry run** before any changes are made.
+- Approve every operation before execution.
+- Preserve the original files until you have verified the results.
+- Keep the cleanup script for future maintenance.
