@@ -1,0 +1,22 @@
+Total files : 156
+Total size  : 2565.74 MB
+
+File Types
+--------------------------
+(no extension)  1
+.csv            13
+.docx           8
+.exe            8
+.glb            1
+.html           2
+.ini            1
+.jpeg           2
+.jpg            1
+.js             75
+.json           3
+.msi            5
+.odt            1
+.pdf            26
+.png            5
+.webp           2
+.zip            2
